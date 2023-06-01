@@ -1,0 +1,67 @@
+.overlay {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $overlay-bg;
+  z-index: 999;
+
+  .overlay-form {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: $overlay-form-width;
+    max-width: 100%;
+    background-color: $white;
+    border-radius: 0;
+
+    .grid-2 {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .block-header {
+    position: relative;
+    top: 0;
+    flex-shrink: 0;
+  }
+  .overlay-footer {
+    flex-shrink: 0;
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.overlay-filters {
+  width: 100vw;
+  height: 100%;
+  max-width: 100%;
+  background-color: $white;
+  border-radius: 0;
+  .block {
+    height: 100%;
+    .filters {
+      .field-control {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  // This element also available without parent class 'filters'
+  .field-control {
+    margin-bottom: 1em;
+  }
+
+  .form-control {
+    &.datepicker {
+      width: 100%;
+    }
+  }
+}
